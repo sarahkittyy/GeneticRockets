@@ -3,10 +3,16 @@
 Application::Application()
 	: mWindow(sf::VideoMode(700, 700), "GeneticRockets")
 {
+	mWindow.setFramerateLimit(60);
+	std::srand(std::time(NULL));
 }
 
 int Application::run()
 {
+	Genetics::Physics simul;
+
+
+	//Main app loop.
 	while (mWindow.isOpen())
 	{
 		//Poll events.
@@ -22,11 +28,13 @@ int Application::run()
 				break;
 			}
 		}
+		simul.update();
 
 		//Clear the screen.
 		mWindow.clear(sf::Color::Black);
 
 		//Draw to the screen.
+		mWindow.draw(simul);
 
 		//Display the drawn items.
 		mWindow.display();

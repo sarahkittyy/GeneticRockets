@@ -4,7 +4,7 @@ project(GeneticRockets)
 set(CMAKE_CXX_STANDARD 17)
 add_compile_options(-g -Wall)
 
-find_package(SFML 2.5 REQUIRED COMPONENT graphics window audio network system)
+find_package(SFML 2.5 REQUIRED COMPONENTS graphics window audio network system)
 
 file(GLOB_RECURSE sources "src/*.cpp")
 

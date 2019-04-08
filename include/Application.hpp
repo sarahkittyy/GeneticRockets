@@ -2,6 +2,12 @@
 
 #include <SFML/Graphics.hpp>
 
+#include <ctime>
+#include <random>
+
+#include "Genetics/Genetics.hpp"
+#include "Rocket/Rocket.hpp"
+
 /**
  * @brief Main app class.
  * 
